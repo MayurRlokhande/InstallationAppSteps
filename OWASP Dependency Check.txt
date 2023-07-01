@@ -1,0 +1,39 @@
+
+OWASP Dependency Check
+==========================================================================================================
+
+Option 1: Downloading the Standalone JAR
+
+Go to the OWASP Dependency Check releases page.
+Download the latest version of the standalone JAR file (dependency-check.jar).
+Ensure you have Java 8 or higher installed on your system.
+Run the tool using the following command:
+java -jar dependency-check.jar --project <project-name> --scan <path-to-project>
+
+===========================================================================================================
+
+Option 2: Using Package Managers
+OWASP Dependency Check is available in popular package managers:
+
+Maven: Add the following plugin to your pom.xml file:
+-------------------------------------------------------------
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.owasp</groupId>
+      <artifactId>dependency-check-maven</artifactId>
+      <version>INSERT_VERSION_HERE</version>
+      <executions>
+        <execution>
+          <goals>
+            <goal>check</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build>
+------------------------------------------------------------
+
+Run mvn dependency-check:check to analyze your project.
+
