@@ -37,3 +37,14 @@ Maven: Add the following plugin to your pom.xml file:
 
 Run mvn dependency-check:check to analyze your project.
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Jenkins cmd for OWASP
+
+stage('OWASP Scan') {
+            steps {
+                dependencyCheck additionalArguments: '--scan ./ ', odcInstallation: 'DP'
+                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+            }
+        }
+
