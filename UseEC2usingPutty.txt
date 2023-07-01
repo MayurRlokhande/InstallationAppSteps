@@ -1,0 +1,18 @@
+
+HOW TO CONNECT EC2 USING PUTTY 
+
+Prerequisites (Putty and puttygen app)
+=================================================
+IF you have .pem file then use both steps and if you have .ppk file then use only 2nd step
+===========================================================================================
+Step1
+----------
+1)Open Puttygen 
+2)File-Load file-Open downloaded .pem file
+3)save private key
+==============================================
+Step2
+---------------------------------------
+1)Open Putty app
+2)Put hostname (public ip of EC@)
+3)ssh->auth-->browse -->>select .ppk file-->open
